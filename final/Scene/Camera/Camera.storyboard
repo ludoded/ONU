@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cml-dA-6rm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ZNh-zD-uh3">
+            <objects>
+                <navigationController id="Cml-dA-6rm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="We4-9N-VVE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="N4B-80-Hew" kind="relationship" relationship="rootViewController" id="ZrD-eg-aSg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTj-WY-K2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="232"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="Khe-nS-4qI">
+            <objects>
+                <viewController id="N4B-80-Hew" customClass="CameraViewController" customModule="final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpF-ag-ijA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yih-PR-FD7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LJ-eP-KGt">
+                                <rect key="frame" x="163" y="617" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordVideo:" destination="N4B-80-Hew" eventType="touchUpInside" id="wlV-8E-nZn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tr-e3-RfX">
+                                <rect key="frame" x="318" y="84" width="37" height="30"/>
+                                <state key="normal" title="Flash"/>
+                                <connections>
+                                    <action selector="flashToggle:" destination="N4B-80-Hew" eventType="touchUpInside" id="tYF-yx-TWJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2T-St-vTj">
+                                <rect key="frame" x="20" y="84" width="89" height="30"/>
+                                <state key="normal" title="Toggle Mode"/>
+                                <connections>
+                                    <action selector="toggleMode:" destination="N4B-80-Hew" eventType="touchUpInside" id="7Yc-sW-yi5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bDw-tc-kOz" firstAttribute="trailing" secondItem="Yih-PR-FD7" secondAttribute="trailing" id="4UX-wj-M3Y"/>
+                            <constraint firstItem="Yih-PR-FD7" firstAttribute="leading" secondItem="bDw-tc-kOz" secondAttribute="leading" id="BzK-xA-fro"/>
+                            <constraint firstItem="bDw-tc-kOz" firstAttribute="bottom" secondItem="Yih-PR-FD7" secondAttribute="bottom" id="Ea3-dI-CVW"/>
+                            <constraint firstItem="7LJ-eP-KGt" firstAttribute="centerX" secondItem="fpF-ag-ijA" secondAttribute="centerX" id="Ivv-vW-DV2"/>
+                            <constraint firstItem="i2T-St-vTj" firstAttribute="top" secondItem="bDw-tc-kOz" secondAttribute="top" constant="20" id="KMh-3k-fgN"/>
+                            <constraint firstItem="2Tr-e3-RfX" firstAttribute="top" secondItem="bDw-tc-kOz" secondAttribute="top" constant="20" id="YNP-nW-0yM"/>
+                            <constraint firstItem="bDw-tc-kOz" firstAttribute="trailing" secondItem="2Tr-e3-RfX" secondAttribute="trailing" constant="20" id="bkb-1T-JmR"/>
+                            <constraint firstItem="bDw-tc-kOz" firstAttribute="bottom" secondItem="7LJ-eP-KGt" secondAttribute="bottom" constant="20" id="fSY-97-EHl"/>
+                            <constraint firstItem="Yih-PR-FD7" firstAttribute="top" secondItem="bDw-tc-kOz" secondAttribute="top" id="rOT-Gt-kUZ"/>
+                            <constraint firstItem="i2T-St-vTj" firstAttribute="leading" secondItem="bDw-tc-kOz" secondAttribute="leading" constant="20" id="zZb-1D-8LM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bDw-tc-kOz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mpR-un-3xb"/>
+                    <connections>
+                        <outlet property="cameraView" destination="Yih-PR-FD7" id="vrm-nG-6m0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cU9-3o-Zar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="232"/>
+        </scene>
+    </scenes>
+</document>
